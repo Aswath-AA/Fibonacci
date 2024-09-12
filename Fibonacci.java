@@ -1,16 +1,16 @@
-public class Fibonacci {
-
-    // Recursive method to calculate nth Fibonacci number
-    public static int fibonacci(int n) {
-        if (n <= 1) {
-            return n; // Base cases: fib(0) = 0, fib(1) = 1
-        } else {
-            return fibonacci(n - 1) + fibonacci(n - 2); // Recursive relation: fib(n) = fib(n-1) + fib(n-2)
-        }
-    }
-
+public class MiddleCharacter {
     public static void main(String[] args) {
-        int n = 10; // Example: find the 10th Fibonacci number
-        System.out.println("Fibonacci number at position " + n + " is: " + fibonacci(n));
+        String str = "Hello, world!"; // Replace with your desired string
+
+        int length = str.length();
+        int middleIndex = length / 2;
+
+        if (length % 2 == 0) {
+            // Even length: Display the two middle characters
+            System.out.println("Middle characters: " + str.charAt(middleIndex - 1) + str.charAt(middleIndex));
+        } else {
+            // Odd length: Display the single middle character
+            System.out.println("Middle character: " + str.charAt(middleIndex));
+        }
     }
 }
